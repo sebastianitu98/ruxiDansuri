@@ -1,0 +1,8 @@
+.navbar{
+    max-width: 75%;
+    margin-bottom: 100px;
+    font-family: 'Lora';
+    font-size: 23px;
+    font-weight: 600;
+    z-index:2;
+}

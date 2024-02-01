@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: radial-gradient(circle at 50% 50%, rgb(219, 42, 105) 0%, rgb(0, 0, 0) 100%);
+    color: white;
+}
