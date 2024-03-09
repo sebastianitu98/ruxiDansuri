@@ -1,23 +1,24 @@
 import { useState } from 'react'
 import './App.css'
-
-import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Presentation from './Components/Presentation/Presentation'
-import Opinions from './Components/Opinions/Opinions'
-import Footer from './Components/Footer/Footer'
-import Promotions from './Components/Promotions/Promotions'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import LogIn from './Pages/LogIn'
+import Promotions from './Pages/Promotions'
+import Videos from './Pages/Videos'
 
 function App() {
 
   return (
-    <div className='App flex flex-col mx-auto justify-center'>
-      <Navbar />
-      <Promotions />
-      <Presentation />
-      <Opinions />
-      <Footer />
-    </div>
+    <Router>
+      <div className='App'>
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/promotions" Component={Promotions} />
+          <Route path="/videos" Component={Videos} />
+          <Route path="/logIn" Component={LogIn} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
