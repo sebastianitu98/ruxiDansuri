@@ -1,0 +1,12 @@
+.opinionCard{
+    display: flex;
+    background: rgb(95, 9, 61);
+    border-radius: 7px;
+    font-size: 30%;
+    width: 200px;
+    margin: 1rem 3rem;
+    padding: 1rem 1.7rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

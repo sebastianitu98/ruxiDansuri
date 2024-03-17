@@ -1,12 +1,22 @@
+.carrousel{
+    width: 100vw;
+}
+
 .opinionSection{
  font-family: 'Lora';
  font-size: 40px;
+ width: 100vw;
 }
 
-.opinionDescription{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
+.opinionsDescription{
+    font-size: 75%;
+}
+
+
+.notSelected{
+    height: 250px;
+}
+
+.selected{
+    height: 300px;
 }
