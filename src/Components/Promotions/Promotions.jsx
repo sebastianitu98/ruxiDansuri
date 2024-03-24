@@ -12,7 +12,7 @@ function Promotions() {
 
 
   return (
-    <div className={promotions.course != '' ? 'promotionsSection mx-auto' : 'promotionsSection hidden mx-auto'}>
+    <div className={promotions.course != '' ? 'promotionsSection mx-auto flex flex-col' : 'promotionsSection hidden mx-auto flex flex-col'}>
       <p>Înscrie-te acum la următorul modul {promotions.course}</p>
       <p id='promotionDate'>Expiră la {promotions.expireDate}</p>
     </div>

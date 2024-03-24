@@ -1,9 +1,11 @@
 .navbar{
-    max-width: 75%;
+    max-width: 100%;
+    padding: 0 12%;
     margin-bottom: 100px;
     font-family: 'Lora';
     font-size: 120%;
     font-weight: 600;
     z-index:2;
     text-wrap: nowrap;
+    background-color: rgba(151, 78, 122, 0.9);
 }

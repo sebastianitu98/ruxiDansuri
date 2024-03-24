@@ -7,7 +7,7 @@ import Footer from '../Components/Footer/Footer'
 
 function Home() {
     return (
-        <div className='home flex flex-col mx-auto justify-center'>
+        <div className='home flex flex-col mx-auto justify-center w-full'>
             <Navbar />
             <Promotions />
             <Presentation />
