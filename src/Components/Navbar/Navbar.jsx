@@ -15,7 +15,7 @@ function Navbar() {
   }
 
   return (
-    <nav className='navbar flex justify-center mx-auto py-2 text-center w-full fixed top-3 left-0 right-0 w-full'>
+    <nav className='navbar flex justify-center mx-auto py-4 text-center w-full fixed top-0 left-0 right-0 w-full'>
       <div id='navContainer' className='flex w-full'>
         {/* LOGO SI DESCRIERE */}
         {/* <div className="nav-logo-name flex justify-center"> */}
