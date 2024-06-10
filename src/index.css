@@ -10,6 +10,7 @@
     text-align: center;
     justify-content: center;
     margin: 0 auto;
-    background: radial-gradient(circle at 50% 50%, rgb(219, 42, 105) 0%, rgb(0, 0, 0) 100%);
+    /* background: lightgray 0% 0% / 100px 100px repeat, #720026; */
+    background: #720026;
     color: white;
 }

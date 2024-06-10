@@ -1,5 +1,5 @@
 .navbar{
-    max-width: 100%;
+    /* max-width: 100%;
     padding: 0 12%;
     margin-bottom: 100px;
     font-family: 'Lora';
@@ -7,5 +7,110 @@
     font-weight: 600;
     z-index:2;
     text-wrap: nowrap;
-    background-color: rgba(151, 78, 122, 0.9);
+    background-color: #720026; */
+    display: flex;
+    max-width: 1540px;
+    height: 72px;
+    padding: 0px 64px;
+    justify-content: space-between;
+    align-items: center;
+    z-index:99;
+    background: #720026;
+    text-wrap: nowrap;
+}
+
+
+#navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.logInLogOutButton{
+    display: flex;
+    padding: 3px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    background: #FFFAFF;
+    color: #720026;
+    max-width: 440px;
+}
+
+.navLi{
+    color: #FFFAFF;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    color: #FFFAFF;
+    font-weight: 100;
+    line-height: 24px;
+}
+
+#navLogo{
+    color: #FFFAFF;
+    font-family: "Reenie Beanie";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 39px;
+    letter-spacing: -1.3px;
+}
+
+@media screen and (min-width: 1000px) {
+    #navHamburger{
+        display: none;
+    }
+    #navButtons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #navHamburger{
+        display: flex-end;
+    }
+    
+    #navButtons {
+        flex-direction: column;
+        z-index: 9999;
+        background-color: #720026;
+        position: absolute;
+        top: 47px;
+        left: 0%;
+        width: 100vw;
+        align-items: end;
+    }
+    .navLi{
+        display: flex;
+        padding: 12px 0px;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+    }
+
+    .logInLogOutButton{
+        display: flex;
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 999px;
+        background: #FFFAFF;
+        max-width: 10px auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .navItemsList{
+        border-bottom: 0.2px solid white;
+        border-top: 0.2px solid white;
+    }
 }

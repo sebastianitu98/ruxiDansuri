@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 
-function Vision() {
+function Contact() {
     return (
         <div>
             <Navbar />
@@ -10,4 +10,4 @@ function Vision() {
     )
 }
 
-export default Vision
+export default Contact

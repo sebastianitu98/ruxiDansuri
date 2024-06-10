@@ -1,24 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useLogout } from '../../hooks/useLogout'
+import { useAuthContext } from '../../hooks/useAuthContext'
 import './Navbar.css'
 
 function Navbar() {
-  return (
-    <nav className='navbar flex justify-between mx-auto py-2 text-center w-full fixed top-0 left-0 right-0'>
-      {/* LOGO SI DESCRIERE */}
-      <div className="nav-logo-name flex justify-center">
-        <img src="logo.png" alt="LOGO" title='LOGO' id='logo' className='hidden' />
-        <p className='navTitle text-center my-auto mx-2'>RUXANDRA T</p>
-      </div>
+  const [navToggled, setNavToggled] = useState(false)
+  const { user } = useAuthContext()
+  const { logout } = useLogout()
 
-      {/* BUTOANE PT NAVIGARE LA SECTIUNEA RESPECTIVA */}
-      <ul className='nav-buttons my-auto flex flex items-center'>
-        <li className='mx-6'><Link to="/" relative="path">Acasa</Link></li>
-        <li className='mx-6'><Link to="/videos" relative="path">Danseaza cu mine!</Link></li>
-        <li className='mx-6'><Link to="/vision" relative="path">Viziunea mea</Link></li>
-        <li className='mx-6'><Link to="/" relative="path">Experienta</Link></li>
-        <li className='mx-6'><Link to="/logIn" relative="path">LOG IN</Link></li>
-      </ul>
+  const handleToggleNavigation = (e) => {
+    e.preventDefault()
+    setNavToggled(!navToggled)
+  }
+
+  return (
+    <nav className='navbar flex justify-center mx-auto py-2 text-center w-full fixed top-3 left-0 right-0 w-full'>
+      <div id='navContainer' className='flex w-full'>
+        {/* LOGO SI DESCRIERE */}
+        {/* <div className="nav-logo-name flex justify-center"> */}
+        {/* <img src="logo.png" alt="LOGO" title='LOGO' id='logo' className='hidden' /> */}
+        <p id='navLogo' className='text-center my-auto mx-2 nav-logo-name'>RUXANDRA T</p>
+        {/* </div> */}
+
+        {/* BUTOANE PT NAVIGARE LA SECTIUNEA RESPECTIVA */}
+        <ul className={`navItemsList my-auto items-center ${navToggled ? 'flex' : 'hidden'}`} id="navButtons">
+          <Link to="/" relative="path" className='mx-4 navLi'>Acasa</Link>
+          <Link to="/aboutMe" relative="path" className='mx-4 navLi'>Despre mine</Link>
+          <Link to="/videos" relative="path" className='mx-4 navLi'>Cursuri</Link>
+          <Link to="/`co`ntact" relative="path" className='mx-4 navLi'>Contact</Link>
+          {!user &&
+            <div className='w-full flex' id='logInRegisterContainer'>
+              <Link to="/logIn" relative="path" className='mx-2 logInLogOutButton'>LOG IN</Link>
+              <Link to="/signUp" relative="path" className='mx-2 logInLogOutButton'>SIGN UP</Link>
+            </div>
+          }
+          {user && < div onClick={logout}>
+            <span className='mx-4 '>{user.nickname}</span>
+            <button className='logInLogOutButton' >
+              <Link to="/" relative="path">Log Out </Link>
+            </button>
+          </div>}
+        </ul>
+      </div>
+      <button id='navHamburgerButton' onClick={handleToggleNavigation}>
+        <img src="navHamburger.png" alt="Navigation" id='navHamburger' />
+      </button>
     </nav>
   )
 }
