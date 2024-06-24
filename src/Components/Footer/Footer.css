@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+
+.footerComponentBottomLeft{
+    color: #FFFAFF;
+    font-family: Satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+.footerComponentBottomRight{
+    color: #FFFAFF;
+    font-family: Satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+#footerComponent{
+    background: #1E1B18;
+    padding: 100px;
+    padding-bottom: 55px;
+    gap: 80px;
+}
+
+.footerImage{
+    width: 200px;
+}
+
+.footerComponentBottom{
+    border-top: 1px solid #FFFAFF;
+}
+
+#footerComponentLogo{
+    color: #FFFAFF;
+    font-family: "Reenie Beanie";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 39px */
+    letter-spacing: -1.3px;
+}
+
+.footerComponentRight{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(1, 2fr);
+    gap: 5px;
+    margin-left: auto;
+}
+
+
+
+
+.footerComponentRightLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    flex: 1 0 0;
+}
+
+.footerComponentRightRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+}
+
+.footerComponentUp{
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+    align-self: stretch;
+    padding: 20px 100px;
+}
+
+.footerComponentLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.footerComponentLeftBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+@media screen and (max-width: 1300px) {
+    .footerComponentUp{
+        padding: 10px 50px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .footerComponentUp{
+        padding: 10px 50px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .footerComponentUp{
+        flex-direction: column;
+    }
+
+    .footerComponentRight{
+        margin-left: 0px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    #footerComponent{
+        padding-bottom: 25px;
+    }
+    .footerComponentBottom{
+        flex-direction: column-reverse;
+    }   
+    .footerComponentBottomLeft{
+        margin: 10px auto;
+    }
+    .footerComponentBottomRight{
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 751px) {
+    #footerComponent{
+        padding-bottom: 10px;
+    }
+    .footerComponentBottom{
+        flex-direction: column-reverse;
+    }   
+    .footerComponentBottomRight{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+
+    .footerComponentBottomLeft{
+        display: flex;
+   
+        margin: 0;
+    }
+
+    .footerComponentRight  {
+        display: flex;
+        flex-direction: column;
+    }
+    .footerComponentLeft{
+        margin-top: 50px;
+    }
+    .footerComponentUp{
+        padding-left: 20px;
+    }
+
+    .footerComponentRightLeft {
+        padding: 0;
+    }
+
+    .footerComponentRightRight{
+        padding: 0;
+    }
+
+    #footerComponent{
+        padding-left: 20px;
+        gap: 10px;
+    }
+    .footerComponentBottomRightComponent{
+        margin: 20px 0;
+    }
+
+    .footerComponentBottomLeft{
+        padding-left: 10px;
+    }
+}

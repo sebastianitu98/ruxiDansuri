@@ -1,0 +1,34 @@
+.titleHeaderImage{
+    height: 50px;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titleHeaderComponent{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    width: fit-content;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleHeaderDescriptionText{
+    font-weight: 100;
+    font-size: 20px;
+    white-space: nowrap;
+    padding: 5%;
+    color: #1E1B18;
+    font-size: 32px;
+    font-family: Satoshi;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 48px;
+    letter-spacing: 3.20px;
+    word-wrap: break-word;
+    padding: 40px;
+    z-index: 2;
+}

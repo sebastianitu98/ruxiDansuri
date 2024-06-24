@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import ThumbNailOrVideo from '../Components/ThumbNailOrVideo/ThumbNailOrVideo';
-import OnlineOfflineBtn from '../Components/ThumbNailOrVideo/OnlineOffline/OnlineOfflineBtn';
+import OnlineOfflineCourses from '../Components/HomeComponents/OnlineOffline/OnlineOfflineCourses';
 
 function Videos() {
 
@@ -9,8 +9,8 @@ function Videos() {
         <div className='mt-48 mx-auto flex flex-col'>
             <Navbar />
             <div className='my-20 mx-auto flex mx-auto'>
-                <OnlineOfflineBtn onlineOffline={'online'} />
-                <OnlineOfflineBtn onlineOffline={'offline'} />
+                <OnlineOfflineCourses onlineOffline={'online'} />
+                <OnlineOfflineCourses onlineOffline={'offline'} />
             </div>
             <p className='mx-40'>Aici vor fi două imagini din cursurile online și offline.
                 În momentul în care glisează cu mouse-ul peste ele, mi-

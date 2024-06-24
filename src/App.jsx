@@ -28,6 +28,7 @@ function App() {
           <Route path="/logIn" element={!user ? <LogIn /> : <Navigate to='/videos' />} />
           <Route path="/signUp" element={!user ? <SignUp /> : <Navigate to='/videos' />} />
           <Route path="/aboutMe" Component={AboutMe} />
+          <Route path="/contact" Component={Contact} />
         </Routes>
       </div>
     </Router>

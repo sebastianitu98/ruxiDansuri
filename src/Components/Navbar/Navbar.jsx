@@ -28,7 +28,7 @@ function Navbar() {
           <Link to="/" relative="path" className='mx-4 navLi'>Acasa</Link>
           <Link to="/aboutMe" relative="path" className='mx-4 navLi'>Despre mine</Link>
           <Link to="/videos" relative="path" className='mx-4 navLi'>Cursuri</Link>
-          <Link to="/`co`ntact" relative="path" className='mx-4 navLi'>Contact</Link>
+          <Link to="/contact" relative="path" className='mx-4 navLi'>Contact</Link>
           {!user &&
             <div className='w-full flex' id='logInRegisterContainer'>
               <Link to="/logIn" relative="path" className='mx-2 logInLogOutButton'>LOG IN</Link>
