@@ -23,11 +23,11 @@ function ResetPasswordForm() {
         <label className='logInPageLabel'>Adresa ta de email</label>
         <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} className='logInPageInput' placeholder='Adresa ta de email' />
 
-        <button disabled={isLoading} className='logInPageButton'>Resetează parola</button>
+        <button disabled={isLoading} className='logInPageButton'> <Link to="/linkForResetSent" relative="path" className='underline'>Resetează parola </ Link ></button>
 
         <div className="logInPageFooter flex justify-between w-full mx-auto">
           <p className='logInPageFooterText'>Nu ai cont?<Link to="/signUp" relative="path" className='underline'>Înregistrează-te</Link></p>
-          <p className='logInPageFooterText'> <Link to="/linkForResetSent" relative="path" className='underline'>Loghează-te</Link></p>
+          <p className='logInPageFooterText'> <Link to="/logIn" relative="path" className='underline'>Loghează-te</Link></p>
         </div>
 
       </form>
