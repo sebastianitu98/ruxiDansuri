@@ -15,7 +15,7 @@ function Navbar() {
   }
 
   return (
-    <nav className='navbar flex justify-center mx-auto py-4 text-center w-full fixed top-0 left-0 right-0 w-full'>
+    <nav className='navbar flex justify-center mx-auto py-4 text-center w-full fixed top-0 left-0 right-0 w-full pb-8'>
       <div id='navContainer' className='flex w-full'>
         {/* LOGO SI DESCRIERE */}
         {/* <div className="nav-logo-name flex justify-center"> */}
@@ -24,15 +24,15 @@ function Navbar() {
         {/* </div> */}
 
         {/* BUTOANE PT NAVIGARE LA SECTIUNEA RESPECTIVA */}
-        <ul className={`navItemsList my-auto items-center ${navToggled ? 'flex' : 'hidden'}`} id="navButtons">
-          <Link to="/" relative="path" className='mx-4 navLi'>Acasa</Link>
+        <ul className={`navItemsList my-auto items-center mt-2 ${navToggled ? 'flex' : 'hidden'}`} id="navButtons">
+          <Link to="/" relative="path" className='mx-4 navLi'>Acasă</Link>
           <Link to="/aboutMe" relative="path" className='mx-4 navLi'>Despre mine</Link>
           <Link to="/videos" relative="path" className='mx-4 navLi'>Cursuri</Link>
           <Link to="/contact" relative="path" className='mx-4 navLi'>Contact</Link>
           {!user &&
             <div className='w-full flex' id='logInRegisterContainer'>
-              <Link to="/logIn" relative="path" className='mx-2 logInLogOutButton'>LOG IN</Link>
-              <Link to="/signUp" relative="path" className='mx-2 logInLogOutButton'>SIGN UP</Link>
+              <Link to="/logIn" relative="path" className='mx-2 logInLogOutButton'>Loghează-te</Link>
+              <Link to="/signUp" relative="path" className='mx-2 logInLogOutButton'>Înregistrează-te</Link>
             </div>
           }
           {user && < div onClick={logout}>

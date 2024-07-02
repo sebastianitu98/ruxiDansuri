@@ -31,7 +31,7 @@ function LogInForm() {
                 <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} className='logInPageInput' placeholder='Parola ta' />
 
 
-                <button disabled={isLoading} className='logInPageButton'>Log In</button>
+                <button disabled={isLoading} className='logInPageButton'>Loghează-te</button>
 
                 <div className="logInPageFooter flex justify-between w-full mx-auto">
                     <p className='logInPageFooterText'>Nu ai cont?<Link to="/signUp" relative="path" className='underline'>Înregistrează-te</Link></p>
