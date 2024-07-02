@@ -6,11 +6,13 @@ import Promotions from './Pages/Promotions'
 import Videos from './Pages/Videos'
 import VideosOnline from './Pages/VideosOnline'
 import VideosOffline from './Pages/VideosOffline'
-import SignUp from './Pages/SignUp'
-import LogIn from './Pages/LogIn'
+import SignUp from './Pages/LogInLogOutPages/SignUp'
+import LogIn from './Pages/LogInLogOutPages/LogIn'
 import './App.css'
 import Contact from './Pages/Contact'
 import AboutMe from './Pages/AboutMe'
+import ResetPassword from './Pages/LogInLogOutPages/ResetPassword'
+import LinkForResetSent from './Components/LogInForm/LinkForResetSent'
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path="/signUp" element={!user ? <SignUp /> : <Navigate to='/videos' />} />
           <Route path="/aboutMe" Component={AboutMe} />
           <Route path="/contact" Component={Contact} />
+          <Route path="/resetPassword" Component={ResetPassword} />
+          <Route path="/linkForResetSent" Component={LinkForResetSent} />
         </Routes>
       </div>
     </Router>

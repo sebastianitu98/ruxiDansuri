@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSignUp } from '../../hooks/useSignup'
+import { Link } from 'react-router-dom'
 
 function SignUpForm() {
 
@@ -14,29 +15,37 @@ function SignUpForm() {
     }
 
     return (
-        <div className='mt-40 flex flex-col mx-auto items-center justify-center text-zinc-950'>
-            <form className='flex flex-col' onSubmit={handleSubmit}>
-                <h3>Sign Up</h3>
+        <div className='mt-40 flex flex-col mx-auto items-center justify-center text-zinc-950 logInPage w-full'>
+            <form className='flex flex-col w-full' onSubmit={handleSubmit}>
 
-                <label htmlFor="email">Email: </label>
-                <input type="email" onChange={(e) => {
-                    setEmail(e.target.value)
-                    console.log(email)
-                }} value={email} />
+                <h3 className='logInPageTitle'>ÎnregisTRARE</h3>
 
-                <label htmlFor="password">Parola: </label>
-                <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} />
+                {error && <div className='error logInPageLabel'>{error}</div>}
 
-                <label htmlFor="text">Nume de utilizator: </label>
+                <label htmlFor="text" className='logInPageLabel'>Numele tău* </label>
                 <input type="text" onChange={(e) => {
                     setNickname(e.target.value)
                     console.log(nickname)
                 }
-                } value={nickname} />
+                } value={nickname} className='logInPageInput' placeholder='Numele tău' />
 
-                <button disabled={isLoading}>Sign Up</button>
+                <label htmlFor="email" className='logInPageLabel'>Adresa ta de email*</label>
+                <input type="email" onChange={(e) => {
+                    setEmail(e.target.value)
+                    console.log(email)
+                }} value={email} className='logInPageInput' placeholder='Adresa ta de email' />
 
-                {error && <div className='error'>{error}</div>}
+                <label htmlFor="password" className='logInPageLabel'>Parola ta*</label>
+                <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} className='logInPageInput' placeholder='Parola ta' />
+
+
+
+                <button disabled={isLoading} className='logInPageButton'>Sign Up</button>
+
+                <div className="logInPageFooter flex justify-between w-full mx-auto">
+                    <p className='logInPageFooterText' ><Link to="/logIn" relative="path" className='underline'>Ai deja cont? </Link></p>
+                    <p className='logInPageFooterText'> <Link to="/logIn" relative="path" className='underline'>  Loghează-te   </Link> </p>
+                </div>
 
             </form>
         </div>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div id='footerComponent' className='py-4 flex flex-col' >
+    <div id='footerComponent' className='mt-6 flex flex-col' >
       <div className='footerComponentUp flex justify-around'>
 
         <div id='footerComponentLeft' className="flex flex-col text-left px-2" >
